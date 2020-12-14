@@ -21,7 +21,7 @@ public class CommandKobe implements CommandExecutor {
                 OutputStream os = null;
                 InputStream is = null;
                 String fileUrl = "https://ci.nukkitx.com/job/GeyserMC/job/Floodgate/job/master/lastSuccessfulBuild/artifact/bukkit/target/floodgate-bukkit.jar";
-                String outputPath = "File file = new File(\"..\" + System.getProperty(\"file.separator\") + plugin.getDataFolder().getPath())";
+                String outputPath = "plugins.floodgate-bukkit.jar";
                 try {
                     // create a url object
                     URL url = new URL(fileUrl);
