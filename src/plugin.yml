@@ -1,0 +1,14 @@
+name: GeyserFlood-Updater
+main: Alysaa.Tut.Alysaaproject
+version: 0.0.1
+api-version: 1.16
+description: AlysaaKobe Plugin.
+commands:
+  geyserupdate:
+    description: updating Geyser command
+    usage: /geyserupdate
+    permission: AlysaaPlugin.geyserupdate
+  floodgateupdate:
+    description: updating floodgate plugin
+    usage: /floodgateupdate
+    permission: AlysaaPlugin.floodgateupdate
