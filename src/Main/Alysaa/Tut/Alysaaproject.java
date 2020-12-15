@@ -2,6 +2,8 @@ package Alysaa.Tut;
 
 import Main.Alysaa.Command.CommandAlysaa;
 import Main.Alysaa.Command.CommandKobe;
+import Main.Alysaa.Tut.AutoUpdateFloodgate;
+import Main.Alysaa.Tut.AutoUpdateGeyser;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -11,12 +13,11 @@ import java.io.IOException;
 
 public class Alysaaproject extends JavaPlugin
 {
-
     public static Alysaaproject plugin;
-
+    AutoUpdateGeyser AutoUpdateGeyser;
+    AutoUpdateFloodgate AutoUpdateFloodgate;
     @Override
-    public void onEnable()
-    {
+    public void onEnable() {
 
         getLogger().info("Plugin has been enabled");
         this.getCommand("geyserupdate").setExecutor(new CommandAlysaa());
@@ -30,7 +31,11 @@ public class Alysaaproject extends JavaPlugin
             } catch (Exception e) {
             }
         }
-    }
+        AutoUpdateGeyser = new AutoUpdateGeyser(this);
+        AutoUpdateGeyser.runTaskTimer(this, 0, 5000);
+        AutoUpdateFloodgate = new AutoUpdateFloodgate(this);
+        AutoUpdateFloodgate.runTaskTimer(this,0,5000);
+        }
     @Override
     public void onDisable()
     {
