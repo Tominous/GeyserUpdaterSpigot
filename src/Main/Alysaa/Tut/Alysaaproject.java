@@ -23,8 +23,14 @@ public class Alysaaproject extends JavaPlugin
         this.getCommand("floodgateupdate").setExecutor(new CommandKobe());
         createFiles();
         plugin = this;
+        File thedir = new File("plugins/update");
+        if (!thedir.exists()) {
+            try {
+                thedir.mkdirs();
+            } catch (Exception e) {
+            }
+        }
     }
-
     @Override
     public void onDisable()
     {
