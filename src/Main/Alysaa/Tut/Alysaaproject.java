@@ -11,6 +11,7 @@ import java.io.IOException;
 
 public class Alysaaproject extends JavaPlugin
 {
+
     public static Alysaaproject plugin;
 
     @Override
@@ -47,6 +48,5 @@ public class Alysaaproject extends JavaPlugin
         } catch (IOException | InvalidConfigurationException e){
             e.printStackTrace();
         }
-
     }
 }

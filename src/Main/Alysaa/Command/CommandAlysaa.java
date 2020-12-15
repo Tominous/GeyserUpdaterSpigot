@@ -22,8 +22,8 @@ public class CommandAlysaa implements CommandExecutor {
                 OutputStream os = null;
                 InputStream is = null;
                 String fileUrl = "https://ci.nukkitx.com/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar";
-                String outputPath = getDataFolder().resolve('geyser-spigot.jar');
-                    try {
+                String outputPath = ("geyser-spigot.jar");
+                try {
                     // create a url object
                     URL url = new URL(fileUrl);
                     // connection to the file
