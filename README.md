@@ -56,6 +56,5 @@ Please do not use the Reload command. this can cause errors on the geyser part. 
 
 ## Meta
 
-AlysaaKobe (Jens) – @jenscollaertprive@hotmail.com
-
+AlysaaKobe (Jens) 
 Distributed under the MIT license. See ``LICENSE`` for more information.
