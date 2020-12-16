@@ -1,13 +1,25 @@
 #Geyser/Floodgate Updating Addon
 #Made By Jens Aka AlysaaKobe
 
-###############################################################################################
-#NOTICE!!! If you use the auto updating it will always download the latest build from jenkins!#
-#DON'T RELOAD THE SERVER! Only restart. Reloading will break Floodgate!                       #
-#If anything breaks due to this plugin we are not responsible!                                #
-###############################################################################################
+###################################################################################################
+#  NOTICE!!! If you use the auto updating it will always download the latest build from jenkins!  #
+#  Server restart is necessary before the updated files are enabled!                              #
+#  If anything breaks due to this plugin we are not responsible!                                  #
+#  Auto updater will update each 24H since the server has been started.                           #
+###################################################################################################
 
 EnableGeyserAutoUpdating: false
 
 
 EnableFloodgateAutoUpdating: false
+
+
+#############################################################################################################
+#  Enable the "Hard" auto updates will overwrite the current running jar files and restart server           #
+#  A propper startup/restart script is needed inorder to use these options. otherwise server will shutdown. #
+#  Only change if you know what you are doing! Please be careful when using these options.                  #
+#############################################################################################################
+
+EnableHardGeyserAutoUpdating: false
+
+EnableHardFloodgateAutoUpdating: false

@@ -4,6 +4,8 @@ import Main.Alysaa.Command.CommandAlysaa;
 import Main.Alysaa.Command.CommandKobe;
 import Main.Alysaa.Tut.AutoUpdateFloodgate;
 import Main.Alysaa.Tut.AutoUpdateGeyser;
+import Main.Alysaa.Tut.HardAutoUpdateFloodgate;
+import Main.Alysaa.Tut.HardAutoUpdateGeyser;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -13,11 +15,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.io.IOException;
 
-public class Alysaaproject extends JavaPlugin
-{
+public class Alysaaproject extends JavaPlugin {
     public static Alysaaproject plugin;
     AutoUpdateGeyser AutoUpdateGeyser;
     AutoUpdateFloodgate AutoUpdateFloodgate;
+    HardAutoUpdateFloodgate HardAutoUpdateFloodgate;
+    HardAutoUpdateGeyser HardAutoUpdateGeyser;
+
     @Override
     public void onEnable() {
 
@@ -44,6 +48,15 @@ public class Alysaaproject extends JavaPlugin
             AutoUpdateFloodgate = new AutoUpdateFloodgate(this);
             AutoUpdateFloodgate.runTaskTimer(this, 0, 1728000);
         }
+        if (getConfig().getBoolean("EnableHardGeyserAutoUpdating")) {
+            HardAutoUpdateGeyser = new HardAutoUpdateGeyser(this);
+            HardAutoUpdateGeyser.runTaskLater(this,1728000);
+        }
+        if (getConfig().getBoolean("EnableHardFloodgateAutoUpdating")) {
+            HardAutoUpdateFloodgate = new HardAutoUpdateFloodgate(this);
+            HardAutoUpdateFloodgate.runTaskLater(this,1728000);
+        }
+
         }
     @Override
     public void onDisable()
