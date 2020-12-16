@@ -1,6 +1,6 @@
 name: GeyserFlood-Updater
-main: Alysaa.Tut.Alysaaproject
-version: 0.0.2
+main: com.Alysaa.Tut.Alysaaproject
+version: 0.1.1
 api-version: 1.15
 description: AlysaaKobe Plugin.
 commands:
