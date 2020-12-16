@@ -20,6 +20,7 @@ public class AutoUpdateGeyser extends BukkitRunnable {
     }
 
     @Override
+
     public void run() {
         Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Geyser Auto Updating");
 

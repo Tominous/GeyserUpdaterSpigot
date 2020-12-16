@@ -30,11 +30,17 @@ public class Alysaaproject extends JavaPlugin
                 thedir.mkdirs();
             } catch (Exception e) {
             }
+
         }
-        AutoUpdateGeyser = new AutoUpdateGeyser(this);
-        AutoUpdateGeyser.runTaskTimer(this, 0, 5000);
-        AutoUpdateFloodgate = new AutoUpdateFloodgate(this);
-        AutoUpdateFloodgate.runTaskTimer(this,0,5000);
+        if (getConfig().getBoolean("EnableGeyserAutoUpdating")) {
+            AutoUpdateGeyser = new AutoUpdateGeyser(this);
+            AutoUpdateGeyser.runTaskTimer(this, 0, 5000);
+        }
+
+        if (getConfig().getBoolean("EnableFloodgateAutoUpdating")) {
+            AutoUpdateFloodgate = new AutoUpdateFloodgate(this);
+            AutoUpdateFloodgate.runTaskTimer(this, 0, 5000);
+        }
         }
     @Override
     public void onDisable()

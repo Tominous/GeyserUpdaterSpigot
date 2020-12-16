@@ -1,2 +1,13 @@
-#Alysaa Plugin
+#Geyser/Floodgate Updating Addon
+#Made By Jens Aka AlysaaKobe
 
+###############################################################################################
+#NOTICE!!! If you use the auto updating it will always download the latest build from jenkins!#
+#DON'T RELOAD THE SERVER! Only restart. Reloading will break Floodgate!                       #
+#If anything breaks due to this plugin we are not responsible!                                #
+###############################################################################################
+
+EnableGeyserAutoUpdating: false
+
+
+EnableFloodgateAutoUpdating: false
