@@ -4,6 +4,8 @@ import Main.Alysaa.Command.CommandAlysaa;
 import Main.Alysaa.Command.CommandKobe;
 import Main.Alysaa.Tut.AutoUpdateFloodgate;
 import Main.Alysaa.Tut.AutoUpdateGeyser;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -19,6 +21,7 @@ public class Alysaaproject extends JavaPlugin
     @Override
     public void onEnable() {
 
+        Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Geyser/Flood Updater is still in beta and can break");
         getLogger().info("Plugin has been enabled");
         this.getCommand("geyserupdate").setExecutor(new CommandAlysaa());
         this.getCommand("floodgateupdate").setExecutor(new CommandKobe());
