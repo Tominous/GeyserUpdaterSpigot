@@ -22,7 +22,7 @@ public class AutoUpdateGeyser extends BukkitRunnable {
     @Override
 
     public void run() {
-        Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Geyser Auto Updating");
+        Bukkit.broadcast(ChatColor.GOLD+"Updating to latest Geyser build!","AlysaaPlugin.broadcast");
 
         OutputStream os = null;
         InputStream is = null;
@@ -62,6 +62,6 @@ public class AutoUpdateGeyser extends BukkitRunnable {
                 }
             }
         }
-        Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "Latest Geyser build has been downloaded, please restart server.");
+        Bukkit.broadcast(ChatColor.GREEN+"Geyser has been updated. Changes will take place after restart.","AlysaaPlugin.broadcast");
     }
 }

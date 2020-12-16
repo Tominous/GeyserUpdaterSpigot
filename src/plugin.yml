@@ -12,3 +12,7 @@ commands:
     description: updating floodgate plugin
     usage: /floodgateupdate
     permission: AlysaaPlugin.floodgateupdate
+permissions:
+  AlysaaPlugin.broadcast:
+    description: Broadcasts updates.
+    default: op

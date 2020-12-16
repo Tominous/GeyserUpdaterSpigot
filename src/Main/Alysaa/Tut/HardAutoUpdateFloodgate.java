@@ -24,7 +24,7 @@ public class HardAutoUpdateFloodgate extends BukkitRunnable
 
     @Override
     public void run() {
-        Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Floodgate Auto Updating");
+        Bukkit.broadcast(ChatColor.GOLD+"Updating Floodgate to the latest build!","AlysaaPlugin.broadcast");
 
         OutputStream os = null;
         InputStream is = null;
@@ -64,7 +64,7 @@ public class HardAutoUpdateFloodgate extends BukkitRunnable
                 }
             }
         }
-        Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "Latest Floodgate build has been downloaded, Restarting server now!.");
+        Bukkit.broadcast(ChatColor.GREEN+"Floodgate has been updated. Restarting server now!","AlysaaPlugin.broadcast");
         ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
         String command = "restart";
         Bukkit.dispatchCommand(console, command);

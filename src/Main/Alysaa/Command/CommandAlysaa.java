@@ -1,10 +1,12 @@
 package Main.Alysaa.Command;
 
 import Alysaa.Tut.Alysaaproject;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import java.io.*;
 import java.net.URL;
@@ -16,9 +18,9 @@ public class CommandAlysaa implements CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player) sender;
             player.hasPermission("AlysaaPlugin.geyserupdate");
-
-            if (command.getName().equalsIgnoreCase("geyserupdate")) {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&eDownloading the latest Geyser build. Please wait!"));
+            {
+                if (command.getName().equalsIgnoreCase("geyserupdate")) {
+                Bukkit.broadcast(ChatColor.GOLD+"Updating Geyser to the latest build!","AlysaaPlugin.broadcast");
                 OutputStream os = null;
                 InputStream is = null;
                 String fileUrl = "https://ci.nukkitx.com/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar";
@@ -57,7 +59,8 @@ public class CommandAlysaa implements CommandExecutor {
                         }
                     }
                 }
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&',"&aDownloading complete! You will need to restart/reload server before changes will take place."));
+                Bukkit.broadcast(ChatColor.GREEN+"Geyser has been updated. Changes will take place after restart.","AlysaaPlugin.broadcast");
+            }
             }
         }
         return true;
