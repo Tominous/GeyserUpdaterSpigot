@@ -34,12 +34,12 @@ public class Alysaaproject extends JavaPlugin
         }
         if (getConfig().getBoolean("EnableGeyserAutoUpdating")) {
             AutoUpdateGeyser = new AutoUpdateGeyser(this);
-            AutoUpdateGeyser.runTaskTimer(this, 0, 5000);
+            AutoUpdateGeyser.runTaskTimer(this, 0, 1728000);
         }
 
         if (getConfig().getBoolean("EnableFloodgateAutoUpdating")) {
             AutoUpdateFloodgate = new AutoUpdateFloodgate(this);
-            AutoUpdateFloodgate.runTaskTimer(this, 0, 5000);
+            AutoUpdateFloodgate.runTaskTimer(this, 0, 1728000);
         }
         }
     @Override
