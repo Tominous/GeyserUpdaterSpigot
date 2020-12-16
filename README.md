@@ -15,6 +15,7 @@ Permissions:
 ```
 AlysaaPlugin.geyserupdate
 AlysaaPlugin.floodgateupdate
+AlysaaPlugin.broadcast
 ```
 
 Commands:
@@ -26,7 +27,14 @@ Commands:
 Auto-Updating:
 
 ```
-You can set Auto-Updating on true in the config.yml.
+You can set Auto-Updating on true in the config.yml, If set to true you will need to restart server manually before changes will take place.
+```
+Hard-Auto-Updating:
+
+```
+You can set Hard-Auto-Updating on true in the config.yml, If set to true make sure you have a working restart-script.
+otherwise it will just shutdown the server.
+
 ```
 
 ## Usage
@@ -40,7 +48,8 @@ Please do not use the Reload command. this can cause errors on the geyser part. 
 
 
 ## Release History
-
+* 0.0.2
+    * Adding Hard Auto Updating
 * 0.0.1
     * Work in progress, Added Geyser and Floodgate command and get code to work!
 
