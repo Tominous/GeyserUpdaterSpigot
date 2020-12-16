@@ -27,12 +27,13 @@ Commands:
 Auto-Updating:
 
 ```
-You can set Auto-Updating on true in the config.yml, If set to true you will need to restart server manually before changes will take place.
+You can set Auto-Updating on true in the config.yml.
+If set to true you will need to restart server manually before changes will take place.
 ```
 Hard-Auto-Updating:
 
 ```
-You can set Hard-Auto-Updating on true in the config.yml, If set to true make sure you have a working restart-script.
+You can set Hard-Auto-Updating on true in the config.yml. If set to true make sure you have a working restart-script.
 otherwise it will just shutdown the server.
 
 ```
