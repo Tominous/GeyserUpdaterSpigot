@@ -21,10 +21,8 @@ public class Alysaaproject extends JavaPlugin {
     com.Alysaa.Updater.AutoUpdateFloodgate AutoUpdateFloodgate;
     com.Alysaa.Updater.HardAutoUpdateFloodgate HardAutoUpdateFloodgate;
     com.Alysaa.Updater.HardAutoUpdateGeyser HardAutoUpdateGeyser;
-
     @Override
     public void onEnable() {
-
         Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Geyser/Flood Updater is still in beta and can break");
         getLogger().info("Plugin has been enabled");
         this.getCommand("geyserupdate").setExecutor(new CommandAlysaa());
@@ -37,13 +35,11 @@ public class Alysaaproject extends JavaPlugin {
                 thedir.mkdirs();
             } catch (Exception e) {
             }
-
         }
         if (getConfig().getBoolean("EnableGeyserAutoUpdating")) {
             AutoUpdateGeyser = new AutoUpdateGeyser(this);
             AutoUpdateGeyser.runTaskTimer(this, 0, 1728000);
         }
-
         if (getConfig().getBoolean("EnableFloodgateAutoUpdating")) {
             AutoUpdateFloodgate = new AutoUpdateFloodgate(this);
             AutoUpdateFloodgate.runTaskTimer(this, 0, 1728000);
@@ -56,18 +52,14 @@ public class Alysaaproject extends JavaPlugin {
             HardAutoUpdateFloodgate = new HardAutoUpdateFloodgate(this);
             HardAutoUpdateFloodgate.runTaskLater(this,1728000);
         }
-
-        }
+    }
     @Override
     public void onDisable()
     {
         getLogger().info("Plugin has been disabled");
-
     }
-
     private File configf;
     private FileConfiguration config;
-
     private void createFiles () {
         configf = new File(getDataFolder(), "config.yml");
         if (!configf.exists()) {

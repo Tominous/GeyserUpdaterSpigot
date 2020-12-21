@@ -16,16 +16,12 @@ import java.net.URLConnection;
 public class HardAutoUpdateGeyser extends BukkitRunnable
 
 {
-
     public HardAutoUpdateGeyser(Alysaaproject alysaaproject) {
-
     }
-
     @Override
     public void run()
     {
         Bukkit.broadcast(ChatColor.GOLD+"Updating Geyser to the latest build!","AlysaaPlugin.broadcast");
-
         OutputStream os = null;
         InputStream is = null;
         String fileUrl = "https://ci.nukkitx.com/job/GeyserMC/job/Floodgate/job/master/lastSuccessfulBuild/artifact/bukkit/target/floodgate-bukkit.jar";

@@ -18,10 +18,8 @@ public class AutoUpdateGeyser extends BukkitRunnable {
     }
 
     @Override
-
     public void run() {
         Bukkit.broadcast(ChatColor.GOLD+"Updating to latest Geyser build!","AlysaaPlugin.broadcast");
-
         OutputStream os = null;
         InputStream is = null;
         String fileUrl = "https://ci.nukkitx.com/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar";

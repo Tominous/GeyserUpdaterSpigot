@@ -14,13 +14,10 @@ public class HardAutoUpdateFloodgate extends BukkitRunnable
 
 {
     public HardAutoUpdateFloodgate(Alysaaproject alysaaproject) {
-
     }
-
     @Override
     public void run() {
         Bukkit.broadcast(ChatColor.GOLD+"Updating Floodgate to the latest build!","AlysaaPlugin.broadcast");
-
         OutputStream os = null;
         InputStream is = null;
         String fileUrl = "https://ci.nukkitx.com/job/GeyserMC/job/Floodgate/job/master/lastSuccessfulBuild/artifact/bukkit/target/floodgate-bukkit.jar";

@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="GFASUpdater.jar">
     <output-path>$PROJECT_DIR$/out/artifacts/GFASUpdater_jar</output-path>
-    <root id="archive" name="GeyserFlood-Updater v0.0.1.jar">
+    <root id="archive" name="GFASUpdater.jar">
       <element id="module-output" name="AlysaaPlugin" />
     </root>
   </artifact>

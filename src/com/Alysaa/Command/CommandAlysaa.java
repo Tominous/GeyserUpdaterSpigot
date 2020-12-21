@@ -11,7 +11,6 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class CommandAlysaa implements CommandExecutor {
-
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player) {
             Player player = (Player) sender;
