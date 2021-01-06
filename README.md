@@ -39,7 +39,7 @@ Please do not use the Reload command. this can cause errors on the geyser part. 
 
 
 ## Release History
-*0.2.0
+* 0.2.0
     * MiniRework
 * 0.0.2
     * Adding Hard Auto Updating
