@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GeyserUpdater.jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GeyserUpdater_jar</output-path>
+    <root id="archive" name="GeyserUpdater.jar">
+      <element id="module-output" name="AlysaaPlugin" />
+    </root>
+  </artifact>
+</component>

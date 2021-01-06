@@ -1,4 +1,4 @@
-#Geyser/Floodgate Updating Addon
+#Geyser Updating Addon
 #Made By Jens Aka AlysaaKobe
 
 ###################################################################################################
@@ -9,17 +9,3 @@
 ###################################################################################################
 
 EnableGeyserAutoUpdating: false
-
-
-EnableFloodgateAutoUpdating: false
-
-
-#############################################################################################################
-#  Enable the "Hard" auto updates will overwrite the current running jar files and restart server           #
-#  A propper startup/restart script is needed inorder to use these options. otherwise server will shutdown. #
-#  Only change if you know what you are doing! Please be careful when using these options.                  #
-#############################################################################################################
-
-EnableHardGeyserAutoUpdating: false
-
-EnableHardFloodgateAutoUpdating: false

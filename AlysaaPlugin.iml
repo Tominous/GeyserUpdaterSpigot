@@ -19,5 +19,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="spigot-1.16.4" level="project" />
+    <orderEntry type="library" name="Geyser-Spigot" level="project" />
   </component>
 </module>

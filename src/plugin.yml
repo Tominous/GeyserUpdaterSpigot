@@ -1,18 +1,12 @@
-name: GFASUpdater
-main: com.Alysaa.Tut.Alysaaproject
-version: 0.1.1
+name: GeyserUpdater
+main: com.Alysaa.Me.Gasu
+version: 0.2.0
 api-version: 1.15
-description: AlysaaKobe Plugin.
+depend: [Geyser-Spigot]
+description: Geyser Auto Updating PLugin Addon.
+
 commands:
   geyserupdate:
     description: updating Geyser command
-    usage: /geyserupdate
-    permission: AlysaaPlugin.geyserupdate
-  floodgateupdate:
-    description: updating floodgate plugin
-    usage: /floodgateupdate
-    permission: AlysaaPlugin.floodgateupdate
-permissions:
-  AlysaaPlugin.broadcast:
-    description: Broadcasts updates.
-    default: op
+    permission: gasupdater.geyserupdate
+    aliases: /geyserupdate
