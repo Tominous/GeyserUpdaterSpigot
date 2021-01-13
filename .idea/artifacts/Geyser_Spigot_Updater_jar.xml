@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Geyser-Spigot-Updater.jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Geyser_Spigot_Updater_jar</output-path>
+    <root id="archive" name="Geyser-Spigot-Updater.jar">
+      <element id="module-output" name="AlysaaPlugin" />
+    </root>
+  </artifact>
+</component>

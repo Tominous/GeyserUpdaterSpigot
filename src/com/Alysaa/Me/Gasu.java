@@ -1,9 +1,9 @@
 package com.Alysaa.Me;
 
 import com.Alysaa.Command.GeyserCommand;
+
 import com.Alysaa.Util.AutoUpdateGeyser;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
+import com.Alysaa.Util.CheckBuildFile;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -14,19 +14,24 @@ import java.io.IOException;
 
 public class Gasu extends JavaPlugin {
     public static Gasu plugin;
-    com.Alysaa.Util.AutoUpdateGeyser AutoUpdateGeyser;
+    com.Alysaa.Util.AutoUpdateGeyser AutoUpdate;
+    com.Alysaa.Util.CheckBuildFile CheckFile;
+
     @Override
     public void onEnable() {
-        Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Geyser Updater is still in beta and can break");
         getLogger().info("Plugin has been enabled");
         this.getCommand("geyserupdate").setExecutor(new GeyserCommand());
         createFiles();
         plugin = this;
+
         if (getConfig().getBoolean("EnableGeyserAutoUpdating")) {
-            AutoUpdateGeyser = new AutoUpdateGeyser(this);
-            AutoUpdateGeyser.runTaskTimer(this, 1728000, 1728000);
+            AutoUpdate = new AutoUpdateGeyser(this);
+            AutoUpdate.runTaskTimer(this, 0, 1728000);
         }
+        CheckFile = new CheckBuildFile();
+        CheckFile.runTaskTimer(this, 0, 36000);
     }
+
     public void onDisable() {
         getLogger().info("Plugin has been disabled");
     }

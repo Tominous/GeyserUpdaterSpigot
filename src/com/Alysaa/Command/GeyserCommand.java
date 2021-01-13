@@ -25,12 +25,7 @@ public class GeyserCommand implements CommandExecutor {
             player.hasPermission("gasupdater.geyserupdate");
             {
                 if (command.getName().equalsIgnoreCase("geyserupdate")) {
-                    sender.sendMessage(ChatColor.GOLD + "Checking current Geyser version!");
-                    try {
-                        Thread.sleep(2500);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    sender.sendMessage(ChatColor.GOLD + "[Geyser-Spigot-Updater] Checking current Geyser version!");
                     try {
                         Properties gitProp = new Properties();
                         gitProp.load(FileUtils.getResource("git.properties"));
@@ -41,9 +36,9 @@ public class GeyserCommand implements CommandExecutor {
                             int buildNum = Integer.parseInt(gitProp.getProperty("git.build.number"));
                             // Compare build numbers.
                             if (latestBuildNum == buildNum) {
-                                sender.sendMessage(ChatColor.GREEN + "Geyser is already on the latest build!");
+                                sender.sendMessage(ChatColor.GREEN + "[Geyser-Spigot-Updater] Geyser is on the latest build!");
                             } else {
-                                sender.sendMessage(ChatColor.RED + "Geyser build is outdated. Geyser is now downloading latest build!");
+                                sender.sendMessage(ChatColor.RED + "[Geyser-Spigot-Updater] Geyser build is outdated. now downloading latest build!");
                                 OutputStream os = null;
                                 InputStream is = null;
                                 String fileUrl = "https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar";
@@ -82,15 +77,12 @@ public class GeyserCommand implements CommandExecutor {
                                         }
                                     }
                                 }
-                                Thread.sleep(2500);
-                                sender.sendMessage(ChatColor.GREEN + "Geyser has been updated! Changes will take place once the server has been restarted!");
+                                sender.sendMessage(ChatColor.GREEN + "[Geyser-Spigot-Updater] Geyser has been updated! Changes will take place once the server has been restarted!");
                             }
                         }
                     } catch (UnsupportedEncodingException e) {
                         e.printStackTrace();
                     } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
