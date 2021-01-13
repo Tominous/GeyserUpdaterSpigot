@@ -13,7 +13,7 @@ Currently the updater only works on Geyser-spigot. Place the Downloaded jar in t
 
 Permissions:
 ```
-AlysaaPlugin.geyserupdate
+gasupdater.geyserupdate
 ```
 
 Commands:
@@ -39,6 +39,8 @@ Please do not use the Reload command. this can cause errors on the geyser part. 
 
 
 ## Release History
+* 0.2.1
+    * Updated build check added & cleanup code.
 * 0.2.0
     * MiniRework
 * 0.0.2
