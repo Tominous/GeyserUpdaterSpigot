@@ -39,6 +39,7 @@ public class GeyserCommand implements CommandExecutor {
                                 sender.sendMessage(ChatColor.GREEN + "[Geyser-Spigot-Updater] Geyser is on the latest build!");
                             } else {
                                 sender.sendMessage(ChatColor.RED + "[Geyser-Spigot-Updater] Geyser build is outdated. now downloading latest build!");
+                                // Download Build
                                 OutputStream os = null;
                                 InputStream is = null;
                                 String fileUrl = "https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar";

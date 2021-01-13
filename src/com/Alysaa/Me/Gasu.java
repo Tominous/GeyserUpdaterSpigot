@@ -23,11 +23,12 @@ public class Gasu extends JavaPlugin {
         this.getCommand("geyserupdate").setExecutor(new GeyserCommand());
         createFiles();
         plugin = this;
-
+        // If true start auto updating
         if (getConfig().getBoolean("EnableGeyserAutoUpdating")) {
             AutoUpdate = new AutoUpdateGeyser(this);
             AutoUpdate.runTaskTimer(this, 0, 1728000);
         }
+        // Enable File Checking
         CheckFile = new CheckBuildFile();
         CheckFile.runTaskTimer(this, 0, 36000);
     }

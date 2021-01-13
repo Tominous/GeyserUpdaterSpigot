@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 public class CheckBuildFile extends BukkitRunnable {
     @Override
     public void run() {
-
+        // Check if updated build is present
         Path p = Paths.get("plugins/update/Geyser-Spigot.jar");
         boolean exists = Files.exists(p);
         boolean notExists = Files.notExists(p);

@@ -32,6 +32,7 @@ public class AutoUpdateGeyser extends BukkitRunnable {
                 } else {
                     System.out.println("[Geyser-Spigot-Updater] Geyser build is outdated. now downloading latest build!");
                     try {
+                        // Download build
                         OutputStream os = null;
                         InputStream is = null;
                         String fileUrl = "https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/target/Geyser-Spigot.jar";
